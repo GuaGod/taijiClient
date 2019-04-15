@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>未报名列表</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="NoSign.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/common/userSignCommon.css">
+    <style type="text/css">
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    a{
+        text-decoration: none;
+        background-color: transparent;
+    }
+    body{
+            background: #3d464d;
+    }
+    </style>
+</head>
+<body>
+    <div id="header" class="head">
+        <div class="headerlogo"><a href="index.html" class="logo">吉林省太极拳协会</a></div>
+        <div class="headerRight">
+            <div class="rebtnlink hRitem"><a href="" class="rebotton">退出登录</a></div>
+            <div class="username hRitem">你好，<a href="">管理员</a></div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="" class="active">比赛系统</a>
+        <ul class="sidebar-pannel">
+          <li><a href="../用户比赛已报名/Enrolment.html">已报名</a></li>
+          <li><a href="../用户比赛未报名/NoSign.html">未报名</a></li>
+        </ul>
+        <hr>
+    </div>
+    <div class="content">
+       <div class="contentHeader">
+           <h1 class="title">未报名比赛</h1>
+       </div>
+       <div class="contentWidget">
+            <div class="contentTable">
+              <div class="search">
+                 <span>关键字搜索:</span>
+                 <input type="search" name="搜索比赛" class="searchText">
+              </div>
+              <table class="contest_list">
+                <thead>
+                   <th>比赛名称</th>
+                   <th>比赛时间</th>
+                   <th>比赛地点</th>
+                   <th>操作</th>
+                </thead>
+              </table>
+            <!-- 分页 -->
+               <div class="pageManager">
+                  <div class="pageCount">共1页</div>
+                  <ul class="pageShow">
+                  </ul>
+               </div>
+            </div>
+       </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var page; //当前页
+        Load(1);
+    })
+    function Load(n){
+        $.ajax({
+            url: "http://www.steins.club/blog/findBlogByBlogClass",
+            type: "GET",
+            async:false,
+            data:{
+                pageNum:n,
+                blogClass:"前端"
+            },
+            dataType:"json",
+            success: function(data) {
+                page=data.pages;
+                $(".pageCount").html("第"+n+"页 / 共"+data.pages+"页");
+                var str = "<thead><th>比赛名称</th><th>比赛时间</th><th>比赛地点</th><th>操作</th></thead>";
+                for(var k in data.list) {
+                    str += "<tr><td>" + data.list[k].title+ "</td><td>" + data.list[k].date + "</td><td>" + data.list[k].title + "</td><td><button class='content_details' id='"+data.list[k].articleId+"'>查看详情</button></td></tr>";
+                }
+                $(".contest_list").html(str);
+                var x1=parseInt(n)-parseInt(2),x2=parseInt(n)-parseInt(1),x3=parseInt(n)+parseInt(1),x4=parseInt(n)+parseInt(2);
+                if(data.pages<5){
+                    var str2="<li><a id='last_page'>上一页</a></li>";
+                    for(var i=1;i<=data.pages;i++){
+                        str2+="<li>"+i+"</li>";
+                    }
+                    str2+="<li><a id='next_page'>下一页</a></li>";
+                    $(".pageShow").html(str2);
+                }
+                else if(x4<=data.pages&&x1>=1){
+                    var str2="<li><a id='last_page'>上一页</a></li><li>"+x1+"</li><li>"+x2+"</li><li>"+n+"</li><li>"+x3+"</li><li>"+x4+"</li><li><a id='next_page'>下一页</a></li>"
+                    $(".pageShow").html(str2);
+                }
+                else if(x4>data.pages){
+                    var str2="<li><a id='last_page'>上一页</a></li><li>"+(data.pages-4)+"</li><li>"+(data.pages-3)+"</li><li>"+(data.pages-2)+"</li><li>"+(data.pages-1)+"</li><li>"+data.pages+"</li><li><a id='next_page'>下一页</a></li>"
+                    $(".pageShow").html(str2);
+                }
+                else if(x1<1){
+                    var str2="<li><a id='last_page'>上一页</a></li><li>"+1+"</li><li>"+2+"</li><li>"+3+"</li><li>"+4+"</li><li>"+5+"</li><li><a id='next_page'>下一页</a></li>"
+                    $(".pageShow").html(str2);
+                }
+                updatePage(n);
+                showDetail();
+            }
+        });
+    }
+    //分页
+    function updatePage(n){
+        var pageNum=$(".pageShow li");
+        //上一页
+        pageNum[0].onclick=function(){
+            if(n>1){
+                Load(parseInt(n)-parseInt(1));
+            }
+        }
+        for(var i=1;i<pageNum.length-1;i++){
+            pageNum[i].onclick=function(n){
+                return function(){
+                    var j=pageNum[n].innerHTML;
+                    Load(j);
+                } 
+            }(i)
+        }
+        //下一页
+        pageNum[pageNum.length-1].onclick=function(){
+            if(n<page){
+                Load(parseInt(n)+parseInt(1));
+            }
+        }
+    }
+    //查看详情
+    // function showDetail(){
+    //     var condetails=$(".content_details");
+    //     for(var i=0;i<condetails.length;i++){
+    //         condetails[i].onclick=function(n){
+    //             return function(){
+    //                 window.location.href = "http://www.steins.club/html/blogDetail.html?id="+condetails[n].id; 
+    //             } 
+    //         }(i)
+    //     }
+    // }
+    
+</script>
+</html>

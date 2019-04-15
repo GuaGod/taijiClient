@@ -1,0 +1,133 @@
+#header{
+    min-width: 850px;
+    height: 60px;
+    background: #399bff;
+    color: #fff;
+    width: 100%;
+    z-index: 900;
+}
+.headerlogo{
+    width: 250px;
+    height: 60px;
+    display: block;
+    background: rgba(0, 0, 0, 0.14);
+    color: #fff;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+.logo{
+    display:block; 
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.headerRight{
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    font-weight: 600;
+}
+.hRitem{
+    float: right;
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 0.9rem;
+    display: inline-block;
+    padding-left: 8px;
+    height: 60px;
+}
+.username a{
+    color: white;
+}
+.rebtnlink a{
+    background: #fff;
+    color: #404B5F;
+    padding: 4px 16px;
+    border-radius: 999px;
+    height: 30px;
+}
+.sidebar{
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #3d464d;
+    z-index: 0;
+    font-size: 13px;
+    font-weight: normal;
+    z-index: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+.sidebar hr{
+	width: 220px;
+	margin: 0 auto;
+}
+.active{
+    margin:0 auto;
+    display: inline-block;
+    width: 250px;
+   color: #f2f2f2;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+.sidebar-pannel{
+   width: 250px;
+   text-align:center;
+   font-size: 1.0rem;
+}
+.sidebar-pannel li{
+   width: 250px;
+   height: 40px;
+   line-height: 40px;
+}
+.sidebar-pannel li a{
+   color: rgba(255, 255, 255, 0.6);
+}
+.content{
+    min-width: 600px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    margin-left: 250px;
+    background: #f5f5f5;
+}
+.contentHeader{
+    background: #fff;
+    margin: -20px -30px 20px -30px;
+    padding: 10px 20px 20px 20px;
+    height: 50px;
+    border-bottom: none;
+    position: relative;
+}
+.contentHeader h1{
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: normal;
+    font-weight: normal;
+    color: #37363e;
+}
+.contentWidget{
+    min-height: 650px;
+    padding: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.contentTable{
+    padding: 10px 5px 30px 5px;
+    background: white;
+    height: auto;
+}

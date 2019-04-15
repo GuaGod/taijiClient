@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding: 0; 
+    box-sizing: border-box;
+
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:link  {
+    text-decoration: none;
+    color:inherit;
+}
+
+a:active {
+    text-decoration: none;
+    color:inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color:inherit;
+}
+
+li {
+    list-style: none;
+}

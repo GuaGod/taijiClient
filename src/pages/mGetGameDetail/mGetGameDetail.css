@@ -1,0 +1,163 @@
+.right-content-container {
+    padding:20px 30px 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content-container > .item {
+    display: flex;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+
+.right-content-container > .item > div:nth-of-type(1) {
+    width:150px;
+    text-align: center;
+    min-height:40px;
+    line-height:40px;
+    font-size: 2rem;
+    color:#333;
+}
+
+.name.item > div:nth-of-type(2) > input{
+    height:40px;
+    line-height:40px;
+    width:250px;
+    font-size:1.5rem;
+    border:none;
+    border-bottom:1px solid rgba(7, 17, 27, .3);
+}
+
+.limit.item > .item-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.limit.item > .item-box .box {
+    height:20px;
+    line-height:20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#search {
+    width:100px;
+    border:none;
+    
+}
+
+.time.item .gameTime {
+    display: flex;
+    height:40px;
+    line-height:40px;
+}
+
+#gameBeginTime, #name, #gameTime, #position, #applicationTime, #type, #stage{
+    border:none;
+    height: 40px;
+    line-height:40px;
+    width:200px;
+    border-bottom:1px solid rgba(7, 17, 27, .3);
+}
+
+.teamsTable {
+    width:800px;
+    color:#333;
+    border:1px solid rgba(7, 17, 27, .3);
+    border-radius: 5px;
+}
+
+.teamsTable .title {
+    display: flex;
+    height:60px;
+    line-height:60px;
+    border-bottom:1px solid rgba(7, 17, 27, .5);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teamsTable .teamNumText {
+    font-size:1.7rem;
+    color:green;
+}
+
+.teamsTable #teamNum {
+    font-size:18px;
+}
+
+.teamsTable .head {
+    display: flex;
+    flex:1;
+    justify-content: space-around;
+    height:34px;
+    line-height:34px;
+    font-size:1.5rem;
+    border-bottom:1px solid rgba(7, 17, 27, .3);
+}
+
+.teamsTable .head div {
+    text-align: center;
+    flex:1;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    border-right:1px solid rgba(7, 17, 27, .3);
+    white-space: nowrap;
+}
+
+.teamsTable .head div:nth-of-type(1) {
+    flex:2;
+}
+
+#team-ul .item {
+    height:40px;
+    line-height:40px;
+    display: flex;            
+    border-bottom:1px solid rgba(7, 17, 27, .3);       
+}
+
+
+#team-ul .item div {
+    flex:1;
+    text-align:center;
+    border-right:1px solid rgba(7, 17, 27, .3);
+}
+
+#team-ul .item div:nth-of-type(1) {
+    flex:2;
+}
+
+#project ul li{
+    height:20px;
+    line-height:20px;
+    font-size:14px;
+}
+
+.devidePage {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+
+#devidePage {
+    display: flex;   
+}
+
+#devidePage li {
+    border:1px solid rgba(7, 17, 27, .5);
+    padding-left:20px;
+    padding-right:20px;
+    font-size:16px;
+    cursor:pointer;
+    color:#333;
+}
+
+#devidePage li:hover {
+    background: rgba(7, 17, 27, .5);
+    color:white;
+}
+
+#devidePage li.active {
+    background: rgba(7, 17, 27, .5);
+    color:white;
+}

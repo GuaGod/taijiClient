@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>比赛详情</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/common/userSignCommon.css">
+    <link rel="stylesheet" type="text/css" href="NoSignDetail.css">
+    <style type="text/css">
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    a{
+        text-decoration: none;
+        background-color: transparent;
+    }
+    body{
+            background: #3d464d;
+    }
+    </style>
+</head>
+<body>
+    <div id="header" class="head">
+        <div class="headerlogo"><a href="index.html" class="logo">吉林省太极拳协会</a></div>
+        <div class="headerRight">
+            <div class="rebtnlink hRitem"><a href="" class="rebotton">退出登录</a></div>
+            <div class="username hRitem">你好，<a href="">管理员</a></div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="" class="active">比赛系统</a>
+        <ul class="sidebar-pannel">
+          <li><a href="../用户比赛已报名/Enrolment.html">已报名</a></li>
+          <li><a href="../用户比赛未报名/NoSign.html">未报名</a></li>
+        </ul>
+        <hr>
+    </div>
+    <div class="content">
+       <div class="contentHeader">
+           <h1 class="title">未报名 >> 比赛详情</h1>
+       </div>
+       <div class="contentWidget">
+            <div class="contentTable">
+               <div class="text_title">python用什么软件编程？python用什么软件编程？python用什么软件编程？python用什么软件编程？python用什么软件编程？</div>
+               <div class="text_Detail">
+Python开发软件可根据其用途不同分为两种，一种是Python代码编辑器，一种是Python集成开发工具，两者的配合使用可以极大的提高Python开发人员的编程效率，以下是常用的几款Python代码编辑器和Python集成开发工具。
+一、Python代码编辑器
+1. Sublime Text
+Sublime Text是一款非常流行的代码编辑器，支持Python代码编辑，同时兼容所有平台，并且丰富的插件扩展了语法和编辑功能，迅捷小巧，具有良好的兼容性，很受编程人士的喜爱！2. Vim
+Vim和Vi是一种模型编辑器，它将文本查看从文本编辑中分离，VIM在原始VI之上做了诸多改进，包括可扩展模型和就地代码构建，VIMScripts可用于各种Python开发任务！
+3. Atom
+Atom被称为“21世纪可破解的文本编辑器”，可以兼容所有平台，拥有时尚的界面、文件系统浏览器和扩展插件市场，使用Electron构建，其运行时安装的扩展插件可支持Python语言！
+4. GNU Emacs
+GNU Emacs是一款终身免费且兼容任何平台的代码编辑器，使用强大的Lisp编程语言进行定制，并为Python开发提供各种定制脚本，是一款可扩展、可定制、自动记录、实时显示的编辑器，一直萦绕在UNIX周围。
+5. Visual Studio Code
+Visual Studio Code是一款兼容Linux、Mac OS X和Windows 平台的全功能代码编辑器，可扩展并且可以对几乎所有任务进行配置，对于Python的支持可以在Visual Studio Code中安装插件，只需快速点击按钮即可成功安装，且可自动识别Python安装和库。
+二、Python集成开发环境
+               </div>
+               <a href="" class="signBtn">小队报名</a>
+            </div>
+       </div>
+    </div>
+</body>
+<!-- 跳转页面 -->
+<!-- <script type="text/javascript">
+   $(document).ready(function() {
+     var url = location.search; 
+     var theRequest = new Object();
+     if ( url.indexOf( "?" ) != -1 ) {  
+       var str = url.substr( 1 );   
+       var strs = str.split( "&" );  
+       for ( var i = 0; i < strs.length; i++ ) {    
+           theRequest[ strs[ i ].split( "=" )[ 0 ] ] = ( strs[ i ].split( "=" )[ 1 ] );  
+       }  
+       console.log(theRequest);
+       $.ajax({
+         url: 'http://www.steins.club/html/blogDetail.html',
+         type: "GET",
+            async:false,
+         data: {
+          id: theRequest
+         },
+         success:function(data){
+             $(".text_Detail").html(data);
+         }
+       })
+     }
+   });
+</script> -->
+</html>

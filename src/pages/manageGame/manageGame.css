@@ -1,0 +1,134 @@
+.right-content-container {
+    padding:20px 40px 40px 20px;
+}
+
+.right-content .title {
+    font-size:2rem;
+}
+
+.right-content-container > .option {
+    display: flex;
+    height:60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.createNewGame {
+    
+    height: 40px;
+    color:white;
+    width:260px;
+    text-align: center;
+    line-height: 40px;
+    font-size:1.6rem;
+    
+    display: flex;
+}
+
+.createNewGame > a {
+    display: block;
+    cursor: pointer;
+    height:100%;
+    background:rgb(0, 156, 54);
+    border-radius: 5px;
+    width:120px;
+    margin-right:10px;
+}
+
+.createNewGame > a:hover {
+    opacity: 0.6;
+}
+
+.gameTable {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    min-height:500px;
+}
+
+.gameTable .head {
+    height:45px;
+    display: flex;
+    flex-direction: row;
+    line-height:45px;
+    text-align: center;
+    font-size:1.6rem;
+    justify-content: space-around;
+}
+
+.gameTable .head div {
+    flex:1;
+    border:1px solid rgb(150, 150, 150);
+}
+
+.gameTable #gameList .item{
+    display: flex;
+    white-space: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height:45px;
+    text-align: center;
+    line-height:45px;
+    font-size:1.5rem;
+}
+
+.gameTable #gameList .item a {
+    display: block;
+    height:100%;
+    width:100%;
+}
+
+.gameTable #gameList .item div {
+    flex:1;
+    border:1px solid rgb(150, 150, 150);
+}
+
+.devidePage-container {
+    width:100%;
+    height:40px;
+    margin-top:20px;
+    line-height:40px;
+    display: flex;
+    justify-content: center;
+}
+
+.devidePage-container {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+#devidePage {
+    display: flex;   
+    justify-content: center;
+    margin:0 auto;
+}
+
+#devidePage li {
+    border:1px solid rgba(7, 17, 27, .5);
+    padding-left:20px;
+    padding-right:20px;
+    font-size:16px;
+    cursor:pointer;
+    color:#333;
+}
+
+#devidePage li:hover {
+    background: rgba(7, 17, 27, .5);
+    color:white;
+}
+
+#devidePage li.active {
+    background: rgba(7, 17, 27, .5);
+    color:white;
+}
+
+#search {
+    outline: none;
+    height:30px;
+    line-height:30px;
+    border:none;
+    text-indent: 10px;
+    border:1px solid rgba(7, 17, 27, .3);
+    border-radius: 15px;
+}

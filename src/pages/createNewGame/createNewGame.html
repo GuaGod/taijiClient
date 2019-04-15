@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建比赛</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/utils/calender/css/lyz.calendar.css"/>
+</head>
+<body>
+    <header class="header"></header>
+     <div class="sideBar">
+         <div class="title">吉林省太极拳协会</div>
+         <ul class="nav">
+              <li><a href="../manageGame/manageGame.html">管理比赛</a></li>
+         </ul>
+     </div>
+     <div class="right-content">
+         <div class="right-content-container">
+         <div class="name item">
+             <div>比赛名称</div>
+             <div>
+                 <input type="text" placeholder="输入比赛名称" id="name"/>
+             </div>
+         </div>
+         <div class="know item">
+             <div>比赛须知</div>
+             <div id="knowEditor">
+
+             </div>
+         </div>
+         <div class="time item">
+            <div>比赛时间</div>
+            <div class="gameTime">
+                <input id="gameBeginTime" type="text" placeholder="开始时间"/>
+                至
+                <input id="gameEndTime" type="text" placeholder="结束时间"/>
+            </div>
+         </div>
+         <div class="position item">
+            <div>比赛地点</div>
+            <select id="prov" onchange="showCity(this)">
+                <option>请选择省份</option>
+            </select>
+            <select id="city" onchange="showCountry(this)">
+                <option>请选择城市</option>
+            </select>
+            <select id="country" onchange="selecCountry(this)">
+                <option>请选择县区</option>
+            </select>
+         </div>
+         <div class="application item">
+             <div>报名时间</div>
+             <div class="applicationTime">
+                <input id="applicationBeginTime" type="text" placeholder="开始时间"/>
+                至
+                <input id="applicationEndTime" type="text" placeholder="结束时间"/>
+            </div>
+         </div>
+         <div class="desc item">
+             <div>比赛描述</div>
+             <div id="descEditor"></div>
+         </div>
+         <div class="limit item">
+             <div>比赛限制</div>
+             <div class="item-box">
+             <div class="box">
+                  <div class="title">男运动员人数限制：</div>
+                  无限制
+                  <input type="radio" name="maleLimit" value="false" checked/>
+                  有限制
+                  <input type="radio" name="maleLimit" value="true"/>
+                  <input type="text" id="maleLimit"/>
+             </div>
+             <div class="box">
+                 <div class="title">女运动员人数限制</div>
+                    无限制
+                    <input type="radio" name="femaleLimit" value="false" checked/>
+                    有限制
+                    <input type="radio" name="femaleLimit" value="true"/>
+                    <input type="text" id="femaleLimit"/>
+             </div>
+             <div class="box">
+                    <div class="title">总人数限制</div>
+                    无限制
+                    <input type="radio" name="peopleLimit" value="false" checked/>
+                    有限制
+                    <input type="radio" name="peopleLimit" value="true"/>
+                    <input type="text" id="peopleLimit"/>
+             </div>
+             <div class="box">
+                 <div class="title">是否提供餐饮</div>
+                 否
+                 <input type="radio" name="food" value="false" checked/>
+                 是
+                 <input type="radio" name="food" value="true"/>
+                </div>
+                <div>
+                        <div class="title">是否提供住宿</div>
+                        否
+                        <input type="radio" name="house" value="false" checked/>
+                        是
+                        <input type="radio" name="house" value="true"/>
+                       </div>
+             </div>
+         </div>
+         <div class="stage item">
+             <div>比赛阶段</div>
+             <input type="input" id="stage"/>
+         </div>
+         <div class="type item">
+             <div>比赛类型</div>
+             <select id="type">
+             </select>
+         </div>
+         <div class="sonType item">
+             <div>比赛项目</div>
+             <div id="sonTypeContainer">
+                             
+             </div>
+         </div>
+         <div class="content item">
+             <div>比赛内容</div>
+             <div id="contentEditor">
+
+             </div>
+         </div>
+
+         <div id="createGame">创建比赛</div>
+
+     </div>
+     <script src="../../assets/utils/jquery.js"></script>
+     <script src="../../assets/utils/layer.js"></script>
+     <script src="../../assets/utils/chooseaddr.js"></script>
+     <script src="../../assets/utils/wangEditor.js"></script>
+     <script src="../../assets/utils/calender/js/lyz.calendar.min.js"></script>
+</body>
+</html>

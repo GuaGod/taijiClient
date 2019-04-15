@@ -1,0 +1,71 @@
+.search{
+    height: 45px;
+    line-height: 45px;
+    font-family: inherit;
+    font-weight: 400;
+    color: #777;
+    padding-left: 10px;
+}
+.searchText{
+    margin-left: 0.5em;
+    height: 34px;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    width: 200px;
+    font-family: arial,sans-serif;
+    font-weight: normal;
+    background: #fff;
+    border: 1px solid #BDC4C9;
+    box-shadow: inset 0px 1px 0px #F1F0F1;
+}
+.contest_list{
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    padding:10px;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: transparent;
+    line-height: 40px;
+    font-size: 0.8rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.contest_list thead{    
+    padding: 16px 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #37363e;
+}
+.contest_list thead,tr,td,th{
+     width: 120px;
+     border: 1px solid #ddd;
+     text-align: center;
+}
+.pageManager{
+     width: auto;
+     margin: 0 auto;
+     font-weight:400;
+     font-family:inherit;
+     padding:10px;
+}
+.pageCount{
+     float: left;
+     height: 30px;
+     line-height: 30px;
+}
+.pageShow{
+     float: right;
+     height: 30px;
+     line-height: 30px;
+     list-style: none;
+     display: inline-block;
+}
+.pageShow li{
+     float: left;
+     cursor: pointer;
+     padding: 0 10px;
+}
